@@ -86,11 +86,11 @@ function render(){
 
     gl.activeTexture(gl.TEXTURE0);
     gl.bindTexture(gl.TEXTURE_2D, tex);
-    gl.uniform1i(program.attributes.get("tex"), 0);
+    gl.uniform1i(program.uniforms.get("tex"), 0);
 
-    gl.activeTexture(gl.TEXTURE0);
+    gl.activeTexture(gl.TEXTURE1);
     gl.bindTexture(gl.TEXTURE_2D, dataTex);
-    gl.uniform1i(program.attributes.get("pts"), 1);
+    gl.uniform1i(program.uniforms.get("pts"), 1);
 
     gl.vertexAttribPointer(
         program.attributes.get("vertexIndex"),  //location
